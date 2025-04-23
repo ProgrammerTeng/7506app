@@ -13,11 +13,24 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+    // LoginActivity传入的用户名
+    private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // 获取LoginActivity传入的的用户名，用来在“我的”功能区中显示用户名
+        username = getIntent().getStringExtra("username");
+
+        // Debug，记得注释掉
+//        if (username != null && !username.isEmpty()) {
+//            android.widget.Toast.makeText(this, "[Debug]: Pass in username: " + username, android.widget.Toast.LENGTH_SHORT).show();
+//        } else {
+//            android.widget.Toast.makeText(this, "[Debug]: Passing in user name failed!", android.widget.Toast.LENGTH_SHORT).show();
+//            username = "";
+//        }
 
         bottomNavigationView = findViewById(R.id.bottom_nav);
 
@@ -44,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
             return loadFragment(selectedFragment);
         });
 
+    }
+
+    // 提供用户名的getter方法
+    public String getUsername() {
+        return username;
     }
 
     // 加载 Fragment
