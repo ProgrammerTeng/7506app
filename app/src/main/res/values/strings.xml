@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="nav_discover">Discover</string>
+    <string name="nav_write">Write</string>
+    <string name="nav_library">Library</string>
+    <string name="nav_extend">Extend</string>
+</resources>
