@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp">
+
+    <ImageView
+        android:id="@+id/image_cover"
+        android:layout_width="377dp"
+        android:layout_height="169dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop" />
+</LinearLayout>
